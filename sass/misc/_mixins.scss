@@ -1,0 +1,153 @@
+/* Define flexbox config */
+@mixin flex-config($justify-content: false, $flex: false, $flex-direction: false, $align-items: false, $flex-wrap: false) {
+    display: flex;
+    
+    @if $justify-content != false {
+      justify-content: $justify-content;
+    }
+    
+    @if $flex != false {
+      flex: $flex;
+    }
+    
+    @if $flex-direction != false {
+      flex-direction: $flex-direction;
+    }
+    
+    @if $align-items != false {
+      align-items: $align-items;
+    }
+
+    @if $flex-wrap != false {
+      flex-wrap: $flex-wrap;
+    }
+}
+
+/* ===== Usage ===== */
+/*
+@include flex-config($align-items: center, $flex-direction: row, $flex-wrap: wrap, $justify-content: space-between);
+*/
+
+/* Define element background */
+@mixin background($position: center ,$repeat: no-repeat, $size) {
+  background: {
+      position: $position;
+      repeat: $repeat;
+      size: $size;
+  }
+}
+
+/* ===== Usage ===== */
+/*
+@include background($position: center ,$repeat: no-repeat, $size: contain);
+*/
+
+/* Define width and height */
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/* ===== Usage ===== */
+/*div {
+  // You can pass width && height
+  @include box(200px, 300px);
+   or just pass width and the height
+     will default to the width value 
+  @include box(200px);
+}*/
+
+
+/* Define font size, line-height and letter-spacing */
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  //font-size: $font-size * 1px;
+  font-size: $font-size * 0.1rem;
+  // example using rem values and 62.5% font-size so 1rem = 10px
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}
+
+/* ===== Usage ===== */
+/*p {
+  @include font-size(12, 18, 1.2);
+  // returns
+  font-size: 12px;
+  line-height: 1.5; // 18 / 12
+  letter-spacing: 0.1em;
+}*/
+
+/* Define pseudo element */
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+
+/* Define breakpoints */
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (max-width: $device-desktop) { @content; }
+  }
+  @else if $point == tablet {
+    @media (min-width: $device-tablet) { @content; }
+  }  
+  @else if $point == sm {
+    @media (max-width: $device-sm) { @content; }
+  }
+  @else if $point == xs {
+    @media (max-width: $device-xs)  { @content; }
+  }   
+}
+
+/* ===== Usage ===== */
+/*
+@include breakpoint(desktop) {
+    Code here...
+}
+*/
+
+/* Define placeholder styles */
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+/* ===== Usage ===== */
+/*input,  
+textarea {  
+    @include input-placeholder {
+        color: $grey;
+    }
+}
+*/
+
+/* Define element positioning */
+@mixin position($position: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: initial) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z-index;
+}
+
+/* ===== Usage ===== */
+/*
+.element-absolute {
+  @include position(absolute, 60px, 0, 0, 0, z('modal'));
+}
+*/

@@ -1,0 +1,19 @@
+/***** Misc *****/
+@import './misc/variables';
+@import './misc/fonts';
+@import './misc/mixins';
+@import './misc/animations';
+
+/***** General *****/
+@import './general/general';
+
+/***** Components *****/
+@import './components/header';
+@import './components/footer';
+@import './components/menus';
+
+/***** Pages *****/
+@import './pages/404';
+@import './pages/home';
+@import './pages/search';
+@import './pages/single';

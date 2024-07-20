@@ -1,0 +1,11 @@
+.footer {
+    background-color: $clr-black;
+    padding: 3.75rem 6rem;
+
+    .footer-wrapper {
+        border: {
+            bottom: 1px solid $clr-gray;
+            top: 1px solid $clr-gray;
+        }
+    }
+}

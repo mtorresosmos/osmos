@@ -7,5 +7,25 @@
             bottom: 1px solid $clr-gray;
             top: 1px solid $clr-gray;
         }
+        padding: 2rem 0;
+    }
+
+    .column {
+        &.top-left {
+            flex-direction: column;
+        }
+    }
+
+    .btn-footer { margin: 3.875rem 0; }
+
+    .drop-logo {
+        @include background($position: center ,$repeat: no-repeat, $size: contain);
+        background-image: url(../img/img-drop.png);
+        height: 72px;
+        width: 624px;
+    }
+
+    @media (min-width: $device-sm) {
+        .btn-footer { margin: 2rem 0; }
     }
 }

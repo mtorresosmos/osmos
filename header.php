@@ -26,8 +26,7 @@
         <!-- header -->
         <header class="header clear" role="banner">
             <a href="<?php echo home_url(); ?>" class="logo">
-                <img class="logo-static" src="<?php echo get_template_directory_uri();?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
-                <img class="logo-scroll" src="<?php echo get_template_directory_uri();?>/img/logo-black.png" alt="<?php bloginfo( 'name' ); ?>">
+                <?php get_template_part( 'template-parts/logos/logo-static' ); ?>
             </a>
             
             <a class="btn btn-mobile-menu" href="javascript:void(0);"></a>

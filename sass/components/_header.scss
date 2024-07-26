@@ -1,25 +1,36 @@
 .header {
     @include flex-config($align-items: center, $flex-direction: row, $justify-content: space-between);
-    background-color: $clr-black;
     padding: 0.6875rem 6rem;
     transition: all .4s ease-in-out;
-    
-    .logo-scroll { display: none; }
+   
+    .logo-static { 
+        transition: width .6s ease-in-out;
+
+        path { 
+            fill: $clr-black; 
+            transition: all .6s ease-in-out;
+        }
+    }
 
     @media (min-width: $device-desktop) {
-        .logo-static { display: block; }
-
         &.sticky {
-            background-color: rgba($clr-white, 0.8);
             left: 0;
             padding: 0.5rem 1.875rem;
             position: fixed;
             top: 0;
             width: 100%;
+            z-index: 999;
 
-            .logo-static { display: none; }
-
-            .logo-scroll { display: block; }
+            .logo-static { 
+                width: 210px;
+                height: 110px;
+            
+                path {
+                    fill: transparent;
+                    stroke: $clr-black;
+                    stroke-width: 1px;
+                }
+            }
         }
     }
 

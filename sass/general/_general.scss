@@ -39,6 +39,14 @@ div { box-sizing: border-box; }
     width: 100%;
 }
 
+.row {
+    @include flex-config($align-items: flex-start, $flex-direction: column, $flex-wrap: wrap, $justify-content: space-between);
+}
+
+.column {
+    @include flex-config($align-items: flex-start, $flex-direction: row, $justify-content: flex-start);
+}
+
 /****** Headings ******/
 .heading {    
     margin: 0;
@@ -88,39 +96,47 @@ div { box-sizing: border-box; }
         }
     }
 
-    &.btn-menu-contact {
-        a {
-            background-image: -webkit-linear-gradient(30deg, $clr-black 50%, transparent 50%);
-            background-image: linear-gradient(30deg, $clr-black 50%, transparent 50%);
-            background: {
-                color: $clr-white;
-                position: 0%;
-                repeat: no-repeat;
-                size: 500px;
-            }
-            border: 1px solid $clr-white;
-            border-radius: 6px;
+    &.btn-slide {
+        background-image: -webkit-linear-gradient(30deg, $clr-black 50%, transparent 50%);
+        background-image: linear-gradient(30deg, $clr-black 50%, transparent 50%);
+        background: {
             color: $clr-white;
-            cursor: pointer;
-            overflow: hidden;
-            padding: 0.75rem 1.375rem;
-            position: relative;
-            text: {
-                align: center;
-                transform: uppercase;
-            }
-            transition: color 600ms ease-in-out, background 600ms ease-in-out;
-            user-select: none;           
-            -webkit-transition: color 600ms ease-in-out, background 600ms ease-in-out;
-            
+            position: 0%;
+            repeat: no-repeat;
+            size: 500px;
+        }
+        border: 1px solid $clr-white;
+        border-radius: 6px;
+        color: $clr-white;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 0.75rem 1.375rem;
+        position: relative;
+        text: {
+            align: center;
+            transform: uppercase;
+        }
+        transition: color 600ms ease-in-out, background 600ms ease-in-out;
+        user-select: none;           
+        -webkit-transition: color 600ms ease-in-out, background 600ms ease-in-out;
+        
+        &::after { display: none; }
+
+        &:hover { 
+            background-position: 100%;
+            color: $clr-black;
+
             &::after { display: none; }
+        }
+    }
 
-            &:hover { 
-                background-position: 100%;
-                color: $clr-black;
+    &.btn-footer {
+        border-radius: 22px;
+        position: relative;
 
-                &::after { display: none; }
-            }
+        i { 
+            margin-left: 0.5rem;
+            transform: rotate(-41deg); 
         }
     }
 }

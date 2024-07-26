@@ -1,24 +1,25 @@
 .menu {
     &.main-menu {
         ul {
-            @include flex-config($align-items: center, $flex-direction: column, $justify-content: space-between);
+            @include flex-config($align-items: flex-end, $flex-direction: column, $justify-content: space-between);
         }
 
         li {
-            margin-top: 2rem;
+            margin-top: 1.25rem;
 
             &:first-child { margin-top: 0; }
 
             a { 
                 display: inline-block;
                 font-size: $font-14;
-                color: $clr-white; 
+                color: $clr-black; 
                 position: relative;
                 text-transform: uppercase;
+                text-align: right;
 
                 &::after {
                     @include pseudo($display: inline-block);
-                    background-color: $clr-white;
+                    background-color: $clr-black;
                     bottom: -3px;
                     height: 2px;
                     left: 0;
@@ -41,7 +42,13 @@
     @media (min-width: $device-desktop) {
         &.main-menu {
             &.menu-sticky {
+                ul { flex-direction: row; }
+
                 li {
+                    margin-left: 1.875rem;
+
+                    &:first-child { margin-left: 0; }
+
                     a { 
                         color: $clr-black; 
                         

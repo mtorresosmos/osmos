@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	
-	<main class="index" style="height:3500px;">
+	<main class="index">
 	</main>
 
 <?php get_footer(); ?>

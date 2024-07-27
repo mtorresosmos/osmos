@@ -450,6 +450,26 @@ div {
 }
 
 /***** Pages *****/
+<<<<<<< HEAD
 .home .video-section video {
   width: 100%;
+=======
+.home .home-section {
+  padding-bottom: 3.875rem;
+}
+.home .video-section video {
+  width: 100%;
+}
+.home .projects-home .bg-title {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/img-title.png);
+  color: transparent;
+  height: 164px;
+  width: 624px;
+}
+.home .projects-home .bg-title span {
+  display: none;
+>>>>>>> master
 }

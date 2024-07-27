@@ -2,6 +2,16 @@
 /**
  * Register theme JS.
  */
+function site_jquery_scripts() {
+    wp_enqueue_script( 'jQuery', 'https://code.jquery.com/jquery-3.7.0.min.js', array(),'3.7.0',true );
+}
+add_action( 'wp_enqueue_scripts', 'site_jquery_scripts' );
+
+function site_owl_carousel_scripts() {
+    wp_enqueue_script( 'owl-carousel', get_stylesheet_directory_uri() . '/js/owl.carousel.min.js', array(),'2.3.4',true );
+}
+add_action( 'wp_enqueue_scripts', 'site_owl_carousel_scripts' );
+
 function site_scripts() {
     wp_enqueue_script( 'site-js', get_stylesheet_directory_uri() . '/js/main.js', array(),'1.0',true );
 }
@@ -17,6 +27,11 @@ function site_font_awesome() {
     wp_enqueue_style( 'font-awesome-solid', get_template_directory_uri() . '/css/solid.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'site_font_awesome', 11 );
+
+function site_owl_carousel_styles() {  
+    wp_enqueue_style( 'owl-carousel-styles', get_template_directory_uri() . '/css/owl.carousel.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'site_owl_carousel_styles', 11 );
 
 
 function site_styles() {  

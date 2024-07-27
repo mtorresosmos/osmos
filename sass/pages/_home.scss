@@ -1,5 +1,25 @@
 .home {
+<<<<<<< HEAD
     .video-section {  
         video { width: 100%; }
     }
+=======
+    .home-section { padding-bottom: 3.875rem; }
+
+    .video-section {  
+        video { width: 100%; }
+    }
+
+    .projects-home {
+        .bg-title {
+            @include background($position: left ,$repeat: no-repeat, $size: contain);
+            background-image: url(../img/img-title.png);
+            color: transparent;
+            height: 164px;
+            width: 624px;
+
+            span { display: none; }
+        }
+    }
+>>>>>>> master
 }

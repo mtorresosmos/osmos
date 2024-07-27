@@ -4,7 +4,10 @@
     transition: all .4s ease-in-out;
    
     .logo-static { 
+        height: 164px;
+        max-width: 960px;
         transition: width .6s ease-in-out;
+        width: 100%;
 
         path { 
             fill: $clr-black; 
@@ -12,29 +15,62 @@
         }
     }
 
-    @media (min-width: $device-desktop) {
-        &.sticky {
-            left: 0;
-            padding: 0.5rem 1.875rem;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999;
+    &.sticky {
+        left: 0;
+        padding: 0.5rem 1.875rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
 
-            .logo-static { 
-                width: 210px;
-                height: 110px;
-            
-                path {
-                    fill: transparent;
-                    stroke: $clr-black;
-                    stroke-width: 1px;
-                }
+        .logo-static { 
+            width: 210px;
+            height: 110px;
+        
+            path {
+                fill: transparent;
+                stroke: $clr-black;
+                stroke-width: 1px;
             }
         }
     }
 
-    @media (max-width: $device-tablet) {
+    @media (max-width: $device-desktop) {
         padding: 0.6875rem 0.9375rem;
+
+        .logo-static {
+            max-width: 720px;
+            height: 140px;
+        }
+    }
+
+    @media (max-width: $device-tablet) {
+        .logo-static {
+            max-width: 320px;
+            height: 80px;
+        }
+
+        &.sticky{ 
+            background-color: $clr-white; 
+            padding: 0.5rem 1.875rem;
+        }
+    }
+
+    @media (max-width: $device-sm) {
+        padding: 0.3125rem 0.9375rem;
+
+        .logo-static {
+            max-width: 140px;
+            height: 30px;
+        }
+
+        &.sticky {  
+            padding: 0.5rem 0.9375rem;
+            
+            .logo-static { 
+                width: 140px;
+                height: 30px;
+            }
+        }
     }
 }

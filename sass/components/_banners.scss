@@ -1,0 +1,8 @@
+.banner {
+    @include background($position: center ,$repeat: no-repeat, $size: cover);
+    width: 100%;
+    
+    &.simple {
+        height: 640px;
+    }
+}

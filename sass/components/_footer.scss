@@ -25,6 +25,18 @@
         width: 624px;
     }
 
+    @media (max-width: $device-tablet) {
+        padding: 1.875rem 0.9375rem;
+
+        .btn-footer { margin: 1.875rem 0; }
+
+        .drop-logo { width: 420px; }
+    }
+
+    @media (max-width: $device-sm) {
+        .drop-logo { width: 280px; }
+    }
+
     @media (min-width: $device-sm) {
         .btn-footer { margin: 2rem 0; }
     }

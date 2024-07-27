@@ -41,6 +41,36 @@
 
     @media (min-width: $device-desktop) {
         &.main-menu {
+            
+        } 
+    }
+
+    @media (max-width: $device-tablet) {
+        &.main-menu {
+            box-sizing: border-box;
+            display: none;
+            flex: 100%;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0;
+            transition: all .4s ease-in-out;
+            width: 100%;
+
+            &.open {
+                animation: opacity .5s;
+                background-color: $clr-white;
+                border-top: 1px solid $clr-black;
+                display: block;
+                height: auto;
+                left: 0;
+                opacity: 1;
+                padding: 0 0 0.625rem;
+                position: absolute;
+                top: 105px;
+                width: 100%;
+            }
+
             &.menu-sticky {
                 ul { flex-direction: row; }
 
@@ -56,37 +86,12 @@
                     }
                 }
             }
-        } 
-    }
-
-    @media (max-width: $device-tablet){
-        &.main-menu {
-            box-sizing: border-box;
-            display: none;
-            flex: 100%;
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            padding: 0;
-            transition: all .4s ease-in-out;
-            width: 100%;
-
-            &.open {
-                animation: opacity .5s;
-                background-color: $clr-black;
-                display: block;
-                height: auto;
-                left: 0;
-                opacity: 1;
-                padding: 0 0 0.625rem;
-                position: absolute;
-                top: 100px;
-                width: 100%;
-            }
 
             .menu-wrapper {
+                align-items: center;
                 border-top: 1px solid $clr-white;
                 flex-direction: column;
+                justify-content: center;
                 padding: {
                     left: 0;
                     top: 0.625rem;
@@ -109,6 +114,12 @@
                     &.item-desktop { display: none; }
                 }
             }
+        }
+    }
+
+    @media (max-width: $device-sm) {
+        &.main-menu {
+            &.open { top: 44px; }
         }
     }
 }

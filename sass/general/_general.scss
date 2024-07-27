@@ -81,7 +81,7 @@ div { box-sizing: border-box; }
 
         &::after {
             @include pseudo($display: block, $pos: absolute, $content: '\f0c9');
-            color: $clr-white;
+            color: $clr-black;
             font: {
                 family: $font-awesome;
                 size: $font-20;

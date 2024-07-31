@@ -10,13 +10,16 @@
 /***** Components *****/
 @import './components/banners';
 @import './components/block-columns';
+@import './components/cards';
 @import './components/galleries';
 @import './components/header';
 @import './components/footer';
 @import './components/menus';
+@import './components/tabs';
 
 /***** Pages *****/
 @import './pages/404';
+@import './pages/category';
 @import './pages/home';
 @import './pages/search';
 @import './pages/single';

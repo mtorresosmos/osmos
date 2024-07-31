@@ -1,0 +1,55 @@
+.tabs {
+    width: 100%;
+    margin: auto;
+
+    &.tabs-category {
+        .tab-btn-wrapper {
+            @include flex-config($align-items: center, $flex-direction: row, $justify-content: space-between);
+            border-bottom: 1px solid;
+            margin: 2.25rem 0;
+        }
+
+        .tab-btn {
+            background: unset;
+            border: {
+                bottom: 2px solid transparent;
+                left: 0;
+                right: 0;
+                top: 0;
+            }
+            cursor: pointer;
+            padding: 0.625rem 1.875rem;
+            text-align: center;
+            transition: all .4s ease-in-out;
+
+            &.active { 
+                border-color: $clr-black;
+                font-weight: 700; 
+            }
+        }
+
+        .tab-content {
+            padding: 0 0.9375rem;
+            margin-top: 1.875rem;
+        }
+    }
+    
+    
+    
+    .tab-panel {
+        display: none;
+        
+        &.active {
+            display: block;
+        }
+    }
+
+    .tab-title {
+        font: {
+            size: $font-20;
+        }
+        line-height: 20px;
+        margin-bottom: 0.9375rem;
+    }
+
+}

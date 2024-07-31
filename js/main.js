@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     mobileMenuHandler();
     removeProjectSectionsAttributes();
+    tabsCategories();
 });
 
 window.addEventListener('scroll', function(){ 
@@ -47,6 +48,30 @@ function removeProjectSectionsAttributes() {
 
     if ( videoElement ) {
         videoElement.removeAttribute('style');
+    }
+}
+
+// Tabs Categories
+function tabsCategories() {
+    const tabButtons = document.querySelectorAll('.tabs-category .tab-btn');
+    const tabPanels = document.querySelectorAll('.tabs-category .tab-panel');
+
+    
+    if ( tabButtons ) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetId);
+    
+                // Deactivate all tabs and hide panels
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanels.forEach(panel => panel.classList.remove('active'));
+    
+                // Activate tab and display panel
+                button.classList.add('active');
+                targetPanel.classList.add('active');
+            });
+        });
     }
 }
 

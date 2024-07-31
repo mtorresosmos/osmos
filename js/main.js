@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     mobileMenuHandler();
+    removeProjectSectionsAttributes();
 });
 
 window.addEventListener('scroll', function(){ 
@@ -40,7 +41,16 @@ function mobileMenuHandler() {
     }   
 }
 
-$(document).ready(function() {
+// Remove tag attributes in Projects sections
+function removeProjectSectionsAttributes() {
+    const videoElement = document.querySelector( '.wp-video' );
+
+    if ( videoElement ) {
+        videoElement.removeAttribute('style');
+    }
+}
+
+/*$(document).ready(function() {
     $('.carousel-custom.carousel-home-projects').owlCarousel({
         stagePadding: 50,
         loop:true,
@@ -58,4 +68,4 @@ $(document).ready(function() {
             }
         }
     })
-});
+});*/

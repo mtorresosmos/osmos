@@ -1,0 +1,18 @@
+.banner {
+    @include background($position: center ,$repeat: no-repeat, $size: cover);
+    width: 100%;
+    
+    &.simple { height: 640px; }
+
+    @media (max-width: $device-desktop) {
+        &.simple { height: 370px; }
+    }
+
+    @media (max-width: $device-tablet) {
+        &.simple { height: 285px; }
+    }
+
+    @media (max-width: $device-xs) {
+        &.simple { height: 170px; }
+    }
+}

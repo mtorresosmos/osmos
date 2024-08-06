@@ -51,6 +51,3 @@ $projects_query = new WP_Query($args);
     endif;
     ?>
 </div>
-
-
-    

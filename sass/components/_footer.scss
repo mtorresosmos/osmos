@@ -30,7 +30,7 @@
         height: 72px;
         width: 624px;
     }
-
+  
     .subtitle {
         font-size: $font-18;
         margin-bottom: 1.25rem;
@@ -59,7 +59,7 @@
     @media (max-width: $device-desktop) {
         .drop-logo {width: 504px; }
     }
-
+  
     @media (max-width: $device-tablet) {
         padding: 1.875rem 0.9375rem;
 

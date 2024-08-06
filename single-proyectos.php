@@ -33,15 +33,20 @@ get_header();
                                 <p class="name">Project Type</p>
                                 <p class="data">
                                     <?php 
-                                        if( $post_categories ) { 
+                                        if( have_rows('tipo_de_proyecto') ):
                                             $counter = 0;
-                                            foreach($post_categories as $cat_name){
-                                                echo ( $counter >= 1 ? ' / ' . $cat_name : $cat_name );
+                                            
+                                            while( have_rows('tipo_de_proyecto') ) : the_row();
+                                                $project_type = get_sub_field('tipo');
+                                                
+                                                echo ( $counter >= 1 ? ' / ' . $project_type : $project_type );
                                                 $counter++;
-                                            }
-                                        } else {
-                                            echo 'No hay categoría asignada';
-                                        }
+                                            
+                                            endwhile;
+
+                                        else :
+                                            echo 'No hay tipo de proyecto asignado.'; 
+                                        endif;
                                     ?>
                                 </p>
                             </div>
@@ -312,6 +317,172 @@ get_header();
                 <?php endif; // servicios_proporcionados ?>                                             
             <!-- /Sections -->
 
+            <!-- Team -->
+            <div class="team">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="column column-2">
+                            <div class="logo-cirlce"></div>
+                            <h2 class="heading heading-1 title">Humans behind the project</h2>
+                        </div>
+
+                        <div class="column column-2">
+
+                        <?php if( have_rows('colaboradores') ): ?>
+                            <?php while( have_rows('colaboradores') ): the_row(); ?>
+
+
+                                <?php if( have_rows('graphic_design') ): ?>
+                                    <?php while( have_rows('graphic_design') ): the_row(); ?>
+                                    
+                                    <?php
+                                        // Check rows exists.
+                                        if( have_rows('colaborador') ): 
+                                            ?>
+                                            <h4 class="department design">Graphic design</h4>
+
+                                            <div class="content">
+
+                                                <?php
+                                                    while( have_rows('colaborador') ) : the_row();
+
+                                                        // Load sub field value.
+                                                        $name = get_sub_field('nombre');
+                                                        $position = get_sub_field('posicion');
+                                                ?>
+                                                    <div class="row">
+                                                        <p class="name"><?=$name; ?></p>
+                                                        <p class="position"><?=$position; ?></p>
+                                                    </div>
+                                                <?php
+                                                    endwhile;
+                                                ?>
+                                            </div>
+                                        <?php
+                                        
+                                        else :
+                                            echo 'No hay colaboradores';
+                                        endif;
+                                        ?>
+                                      
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+
+                                <?php if( have_rows('marketing') ): ?>
+                                    <?php while( have_rows('marketing') ): the_row(); ?>
+                                    
+                                    <?php
+                                        // Check rows exists.
+                                        if( have_rows('colaborador') ): 
+                                            ?>
+                                            <h4 class="department marketing">Marketing</h4>
+                                            
+                                            <div class="content">
+
+                                                <?php
+                                                    while( have_rows('colaborador') ) : the_row();
+
+                                                        // Load sub field value.
+                                                        $name = get_sub_field('nombre');
+                                                        $position = get_sub_field('posicion');
+                                                ?>
+                                                    <div class="row">
+                                                        <p class="name"><?=$name; ?></p>
+                                                        <p class="position"><?=$position; ?></p>
+                                                    </div>
+                                                <?php
+                                                    endwhile;
+                                                ?>
+                                            </div>
+                                        <?php
+                                        
+                                        else :
+                                            echo 'No hay colaboradores';
+                                        endif;
+                                        ?>
+                                      
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+
+                                <?php if( have_rows('web_development') ): ?>
+                                    <?php while( have_rows('web_development') ): the_row(); ?>
+                                    
+                                    <?php
+                                        // Check rows exists.
+                                        if( have_rows('colaborador') ): 
+                                            ?>
+                                            <h4 class="department web">Web Development</h4>
+
+                                            <div class="content">
+
+                                                <?php
+                                                    while( have_rows('colaborador') ) : the_row();
+
+                                                        // Load sub field value.
+                                                        $name = get_sub_field('nombre');
+                                                        $position = get_sub_field('posicion');
+                                                ?>
+                                                    <div class="row">
+                                                        <p class="name"><?=$name; ?></p>
+                                                        <p class="position"><?=$position; ?></p>
+                                                    </div>
+                                                <?php
+                                                    endwhile;
+                                                ?>
+                                            </div>
+                                        <?php
+                                        
+                                        else :
+                                            
+                                        endif;
+                                        ?>
+                                      
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+
+                                <?php if( have_rows('management') ): ?>
+
+                                    <?php while( have_rows('management') ): the_row(); ?>
+                                        
+                                        <?php if( have_rows('colaborador') ): ?>
+
+                                            <h4 class="department management">Management</h4>
+                                            
+                                            <div class="content">
+
+                                                <?php
+                                                    while( have_rows('colaborador') ) : the_row();
+
+                                                        // Load sub field value.
+                                                        $name = get_sub_field('nombre');
+                                                        $position = get_sub_field('posicion');
+                                                ?>
+                                                    <div class="row">
+                                                        <p class="name"><?=$name; ?></p>
+                                                        <p class="position"><?=$position; ?></p>
+                                                    </div>
+                                                
+                                                    <?php endwhile; ?>
+                                            </div>
+                                        <?php
+                                        
+                                        else :
+                                            
+                                        endif;
+                                        ?>
+                                      
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+
+                                
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Team -->                        
 
         <?php
 

@@ -7,10 +7,10 @@ function site_jquery_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'site_jquery_scripts' );
 
-/*function site_owl_carousel_scripts() {
+function site_owl_carousel_scripts() {
     wp_enqueue_script( 'owl-carousel', get_stylesheet_directory_uri() . '/js/owl.carousel.min.js', array(),'2.3.4',true );
 }
-add_action( 'wp_enqueue_scripts', 'site_owl_carousel_scripts' );*/
+add_action( 'wp_enqueue_scripts', 'site_owl_carousel_scripts' );
 
 function site_scripts() {
     wp_enqueue_script( 'site-js', get_stylesheet_directory_uri() . '/js/main.js', array(),'1.0',true );
@@ -28,10 +28,10 @@ function site_font_awesome() {
 }
 add_action( 'wp_enqueue_scripts', 'site_font_awesome', 11 );
 
-/*function site_owl_carousel_styles() {  
+function site_owl_carousel_styles() {  
     wp_enqueue_style( 'owl-carousel-styles', get_template_directory_uri() . '/css/owl.carousel.min.css' );
 }
-add_action( 'wp_enqueue_scripts', 'site_owl_carousel_styles', 11 );*/
+add_action( 'wp_enqueue_scripts', 'site_owl_carousel_styles', 11 );
 
 
 function site_styles() {  
@@ -131,7 +131,7 @@ function os_projects_post_type() {
         'label'               => __( 'Proyectos', 'osmos' ),
         'description'         => __( 'Nuestros Proyectos', 'osmos' ),
         'labels'              => $labels,
-        'supports'            => array( 'thumbnail', 'title', 'editor', 'excerpt', 'author', 'custom-fields' ),
+        'supports'            => array( 'thumbnail', 'title', 'custom-fields' ),
         'taxonomies'          => array( 'category' ),
         'hierarchical'        => false,
         'public'              => true,

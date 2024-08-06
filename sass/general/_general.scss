@@ -37,6 +37,8 @@ div { box-sizing: border-box; }
     max-width: 1080px;
     padding: 0 0.9375rem;
     width: 100%;
+
+    &.big { max-width: 1312px; }
 }
 
 .row {
@@ -159,6 +161,19 @@ div { box-sizing: border-box; }
         i { 
             margin-left: 0.5rem;
             transform: rotate(-41deg); 
+        }
+    }
+
+    &.btn-simple {
+        i { 
+            margin-left: 0.5rem;
+            position: relative;
+            transform: rotate(-41deg); 
+            transition: all .4s ease-in-out;
+        }
+
+        &:hover {
+            i { left: 4px; }
         }
     }
 }

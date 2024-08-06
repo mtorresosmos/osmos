@@ -66,7 +66,7 @@
             }
 
             &.menu-sticky {
-                ul { flex-direction: row; }
+                ul { flex-direction: column; }
 
                 li {
                     margin-left: 1.875rem;

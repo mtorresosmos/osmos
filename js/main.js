@@ -55,12 +55,14 @@ function removeProjectSectionsAttributes() {
 function tabsCategories() {
     const tabButtons = document.querySelectorAll('.tabs-category .tab-btn');
     const tabPanels = document.querySelectorAll('.tabs-category .tab-panel');
+    const tabWrapper = document.querySelector('.tab-btn-wrapper');
 
     
     if ( tabButtons ) {
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const targetId = button.getAttribute('data-target');
+                const targetColor = button.getAttribute('data-color');
                 const targetPanel = document.getElementById(targetId);
     
                 // Deactivate all tabs and hide panels
@@ -70,27 +72,52 @@ function tabsCategories() {
                 // Activate tab and display panel
                 button.classList.add('active');
                 targetPanel.classList.add('active');
+                
+                switch(targetColor) {
+                    case 'orange':
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-orange' );
+                        break;
+                    case 'green':
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-green' );
+                        break;
+                    case 'blue':
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-blue' );
+                        break;
+                    case 'purple':
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-purple' );
+                        break;
+                    default:
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-black' );
+                        break;
+                }
             });
         });
     }
 }
 
-/*$(document).ready(function() {
+$(document).ready(function() {
     $('.carousel-custom.carousel-home-projects').owlCarousel({
-        stagePadding: 50,
+        stagePadding: 160,
         loop:true,
-        margin:10,
+        margin: 20,
         nav:true,
         responsive:{
             0:{
-                items:1
+                margin: 20,
+                items:1,
+                stagePadding: 20,
             },
             600:{
-                items:3
+                items:2
             },
             1000:{
-                items:4
+                items:3
             }
         }
     })
-});*/
+});

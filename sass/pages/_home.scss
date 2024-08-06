@@ -1,5 +1,34 @@
 .home {
+    .home-section { padding-bottom: 3.875rem; }
+
     .video-section {  
         video { width: 100%; }
+    }
+
+    .projects-home {
+        padding: 4rem 0;
+
+        .bg-title {
+            @include background($position: left ,$repeat: no-repeat, $size: contain);
+            background-image: url(../img/img-title.png);
+            color: transparent;
+            height: 164px;
+            width: 624px;
+
+            span { display: none; }
+        }
+    }
+
+    @media (max-width: $device-tablet) {
+        .projects-home { padding: 2rem 0; }
+    }
+
+    @media (max-width: $device-sm) {
+        .projects-home {
+            .bg-title {
+                height: 80px;
+                width: 100%;
+            }
+        }
     }
 }

@@ -1,0 +1,101 @@
+.contact {
+    .heading-wrapper { 
+        border-bottom: 1px solid $clr-gray-4;
+        padding: 4rem 0; 
+    }
+
+    .title {
+        color: transparent;
+        height: 66px;
+        margin: 0 0 2rem;
+        position: relative;
+
+        &::before {
+            @include background($position: center left ,$repeat: no-repeat, $size: contain);
+            @include pseudo($display: block, $pos: absolute, $content: '');
+            background-image: url(../img/img-title-contact.png);
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+
+        }
+    }
+
+    .text-container  {
+        p { font-size: $font-24; }
+    } 
+
+    .row { flex-direction: row; }
+
+    .column { 
+        flex-direction: column; 
+        flex: 50%;
+    }
+
+    .fig-logo {
+        @include background($position: center left ,$repeat: no-repeat, $size: contain);
+        background-image: url(../img/logo-circle.png);
+        height: 180px;
+        margin-bottom: 4.5rem;
+        width: 192px;
+    }
+
+    .content { padding: 4rem 0 8rem; }
+
+    .link { 
+        color: $clr-black;
+        font-size: $font-28;
+        margin-bottom: 0.625rem;
+    }
+
+    .btn-wrapper { 
+        @include flex-config($align-items: flex-start, $flex-direction: column, $justify-content: flex-start);
+        margin-top: 11.25rem; 
+    }
+
+    .btn-link-contact {
+        color: $clr-black;
+        font-size: $font-20;
+        margin-bottom: 1.25rem;
+    }
+
+    .form-wrapper {
+        max-width: 640px;
+        width: 100%;
+    }
+
+    @media (max-width: $device-tablet) {
+        .heading-wrapper { padding: 1.875rem 0; } 
+
+        .title { height: 44px; }
+
+        .text-container  {
+            p { font-size: $font-18; }
+        }
+
+        .content { padding: 2rem 0; }
+
+        .fig-logo { margin-bottom: 1.875rem; }
+
+        .link { font-size: $font-20; }
+
+        .btn-wrapper { margin-top: 1.875rem; }
+    }
+
+    @media (max-width: $device-sm) {
+        .title { height: 36px; }
+
+        .row { flex-direction: column; }
+
+        .column {
+            &.column-1 { 
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 3.125rem;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -38,13 +38,7 @@
             }
         }
     }
-
-    @media (min-width: $device-desktop) {
-        &.main-menu {
-            
-        } 
-    }
-
+    
     @media (max-width: $device-tablet) {
         &.main-menu {
             box-sizing: border-box;
@@ -72,7 +66,8 @@
             }
 
             &.menu-sticky {
-                ul { flex-direction: row; }
+
+                ul { flex-direction: column; }
 
                 li {
                     margin-left: 1.875rem;

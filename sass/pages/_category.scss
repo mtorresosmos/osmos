@@ -1,0 +1,104 @@
+.page-category {
+    .content-wrapper { max-width: 1312px; }
+
+    .heading-wrapper {
+        .row { 
+            align-items: center;
+            flex-direction: row; 
+            padding: 8rem 0 4rem;
+        }
+
+        .column {
+            flex-direction: column;
+            width: 100%;
+            
+            &.column-1 { 
+                flex: 70%;
+                max-width: 818px; 
+            }
+
+            &.column-2 { 
+                flex: 30%;
+                max-width: 430px; 
+            }
+        }
+
+        .btn {
+            &.btn-category {
+                background-image: linear-gradient(30deg, $clr-purple 50%, transparent 50%);
+                border: 1px solid $clr-purple;
+                border-radius: 22px;
+                margin-top: 2rem;
+
+                i { margin-left: 0.4375rem; }
+
+                &:hover { color: $clr-purple; }
+            }
+        }
+    }
+
+    @media (max-width: $device-desktop) {
+        .heading-wrapper {
+            .row { padding: 1.875rem 0; }
+
+            .heading {
+                &.heading-1 {
+                    &.title { 
+                        font-size: $font-48; 
+                        line-height: 52px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $device-tablet) {
+        .heading-wrapper { 
+            .row { padding: 1.875rem 0; }
+            
+            .heading {
+                &.heading-1 {
+                    &.title { 
+                        font-size: $font-36; 
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            p {
+                font-size: $font-14;
+                line-height: 16px;
+            }
+
+            .btn {
+                &.btn-category { font-size: $font-14; }
+            }
+        }
+    }
+
+    @media (max-width: $device-sm) {
+        .heading-wrapper {
+            .row {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .column {
+                &.column-1 { margin-bottom: 1.875rem; }
+            }
+        }
+    }
+        
+    @media (max-width: $device-xs) {
+        .heading-wrapper {
+            .heading {
+                &.heading-1 {
+                    &.title { 
+                        font-size: $font-24; 
+                        line-height: 38px;
+                    }
+                }
+            }
+        }
+    }
+}

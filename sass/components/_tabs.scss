@@ -1,0 +1,102 @@
+.tabs {
+    width: 100%;
+    margin: auto;
+
+    &.tabs-category {
+        .tab-btn-wrapper {
+            @include flex-config($align-items: center, $flex-direction: row, $justify-content: space-between);
+            border-bottom: 1px solid;
+            margin: 2.25rem 0;
+
+            &.border-black { border-color: $clr-black; }
+
+            &.border-blue { border-color: $clr-blue; }
+
+            &.border-green { border-color: $clr-green; }
+
+            &.border-orange { border-color: $clr-orange; }
+
+            &.border-purple { border-color: $clr-purple; }
+        }
+
+        .tab-btn {
+            background: unset;
+            border: {
+                bottom: 2px solid transparent;
+                left: 0;
+                right: 0;
+                top: 0;
+            }
+            cursor: pointer;
+            padding: 0.625rem 1.875rem;
+            text-align: center;
+            transition: all .4s ease-in-out;
+
+            &.active { 
+                border-color: $clr-black;
+                font-weight: 700; 
+
+                &.border-black { 
+                    border-color: $clr-black; 
+                    color: $clr-black;
+                }
+
+                &.border-blue { 
+                    border-color: $clr-blue;
+                    color: $clr-blue;
+                }
+
+                &.border-green { 
+                    border-color: $clr-green; 
+                    color: $clr-green;
+                }
+
+                &.border-orange { 
+                    border-color: $clr-orange; 
+                    color: $clr-orange;
+                }
+
+                &.border-purple { 
+                    border-color: $clr-purple;
+                    color: $clr-purple; 
+                }
+            }
+        }
+
+        .tab-content {
+            padding: 0 0.9375rem;
+            margin-top: 1.875rem;
+        }
+
+    }   
+    
+    .tab-panel {
+        display: none;
+        
+        &.active {
+            display: block;
+        }
+    }
+
+    .tab-title {
+        font: {
+            size: $font-20;
+        }
+        line-height: 20px;
+        margin-bottom: 0.9375rem;
+    }
+
+    @media (max-width: $device-tablet) {
+        &.tabs-category {
+            .tab-btn { padding: .625rem 0.625rem; }
+        }
+    }
+
+    @media (max-width: $device-sm) {
+        &.tabs-category {
+            .tab-btn-wrapper { flex-wrap: wrap; }
+
+            .tab-btn{ flex: 50%; }
+        }
+    }
+}

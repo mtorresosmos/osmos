@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     mobileMenuHandler();
+    removeProjectSectionsAttributes();
+    tabsCategories();
 });
 
 window.addEventListener('scroll', function(){ 
@@ -39,3 +41,83 @@ function mobileMenuHandler() {
         }, false);
     }   
 }
+
+// Remove tag attributes in Projects sections
+function removeProjectSectionsAttributes() {
+    const videoElement = document.querySelector( '.wp-video' );
+
+    if ( videoElement ) {
+        videoElement.removeAttribute('style');
+    }
+}
+
+// Tabs Categories
+function tabsCategories() {
+    const tabButtons = document.querySelectorAll('.tabs-category .tab-btn');
+    const tabPanels = document.querySelectorAll('.tabs-category .tab-panel');
+    const tabWrapper = document.querySelector('.tab-btn-wrapper');
+
+    
+    if ( tabButtons ) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetColor = button.getAttribute('data-color');
+                const targetPanel = document.getElementById(targetId);
+    
+                // Deactivate all tabs and hide panels
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanels.forEach(panel => panel.classList.remove('active'));
+    
+                // Activate tab and display panel
+                button.classList.add('active');
+                targetPanel.classList.add('active');
+                
+                switch(targetColor) {
+                    case 'orange':
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-orange' );
+                        break;
+                    case 'green':
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-green' );
+                        break;
+                    case 'blue':
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-blue' );
+                        break;
+                    case 'purple':
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-purple' );
+                        break;
+                    default:
+                        tabWrapper.removeAttribute('class');
+                        tabWrapper.setAttribute('class', 'tab-btn-wrapper border-black' );
+                        break;
+                }
+            });
+        });
+    }
+}
+
+$(document).ready(function() {
+    $('.carousel-custom.carousel-home-projects').owlCarousel({
+        stagePadding: 160,
+        loop:true,
+        margin: 20,
+        nav:true,
+        responsive:{
+            0:{
+                margin: 20,
+                items:1,
+                stagePadding: 20,
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    })
+});

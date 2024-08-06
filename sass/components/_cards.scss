@@ -1,8 +1,17 @@
-.carousel-custom {
-    &.carousel-home-projects {
+.cards {
+    &.double-column {
+        @include flex-config($align-items: flex-start, $flex-direction: row, $flex-wrap: wrap, $justify-content: flex-start);
+
+        .item {
+            @include flex-config($align-items: flex-start, $flex-direction: column, $justify-content: flex-start);
+            margin-bottom: 4rem;
+            margin: 0 0.9375rem 1.875rem;
+            width: 45%;
+        }
+
         .thumb-wrapper {
-            display: block;
-            height: 480px;
+            max-width: 644px;
+            height: 432px;
             width: 100%;
         }
 
@@ -13,7 +22,6 @@
         }
 
         .title {
-            display: block;
             color: $clr-black;
             font-size: $font-28;
             margin: 1.25rem 0 1rem;
@@ -38,22 +46,10 @@
                 }
             }
         }
-
-        /*.owl-carousel .owl-nav button.owl-next, 
-        .owl-carousel .owl-nav button.owl-prev, */
-        .owl-nav {
-            @include flex-config($align-items: center, $flex-direction: row, $flex-wrap: wrap, $justify-content: center);
-            padding-top: 1.875rem;
-
-            button {
-                font-size: $font-36;
-                margin: 0 20px;
-            }
-        }
     }
 
     @media (max-width: $device-tablet) {
-        &.carousel-home-projects {
+        &.double-column {
             .thumb-wrapper { height: 270px; }
 
             .category-wrapper {
@@ -66,6 +62,21 @@
                         &::before { display: inline-block; }
                     }
                 }
+            }
+        }
+    }
+
+    @media (max-width: $device-sm) {
+        &.double-column {
+            .item { width: 44%; }
+        }
+    }
+
+    @media (max-width: $device-xs) {
+        &.double-column {
+            .item { 
+                margin: 0 0 1.875rem;
+                width: 100%; 
             }
         }
     }

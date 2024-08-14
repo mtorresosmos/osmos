@@ -1,10 +1,10 @@
 .home {
-    .home-section { padding-bottom: 3.875rem; }
+    .home-section { padding-bottom: 4rem; }
 
     .video-section {  
         video { width: 100%; }
 
-        .buttons-grid { padding-bottom: 4rem; }
+        .buttons-grid { padding-top: 3.125rem; }
 
         .content-wrapper {
             @include flex-config($align-items: center, $flex-direction: row, $flex-wrap: wrap, $justify-content: space-between);
@@ -58,16 +58,17 @@
         }
     }
 
-    .block-horizonal-home { padding: 4rem 0; }
+    .block-horizonal-home { padding-bottom: 4rem; }
 
     .projects-home {
-        padding: 4rem 0;
+        padding-bottom: 4rem;
 
         .bg-title {
             @include background($position: left ,$repeat: no-repeat, $size: contain);
             background-image: url(../img/img-title.png);
             color: transparent;
             height: 164px;
+            margin: 0;
             width: 624px;
 
             span { display: none; }
@@ -84,7 +85,7 @@
     .our-services-home {
         border-top: 1px solid $clr-black ;
 
-        .table { padding: 4rem 0; }
+        .table { padding-bottom: 4rem; }
     }
 
     @media (max-width: $device-desktop) {
@@ -94,20 +95,24 @@
     }
 
     @media (max-width: $device-tablet) {
+        .home-section { padding-bottom: 2rem; }
+
         .video-section {
+            &.home-section { padding-bottom: 0; }
+
             .buttons-grid { display: none; }
         }
 
-        .block-horizonal-home { padding: 1.875rem 0; }
+        .block-horizonal-home { padding: 0 0 1.875rem; }
 
         .projects-home { 
-            padding: 2rem 0;
+            padding-bottom: 2rem;
 
             .btn-wrapper { margin-top: 1.875rem; }
         }
 
         .our-services-home {
-            .table { padding: 1.875rem 0; }
+            .table { padding-bottom: 1.875rem; }
         }
     }
 

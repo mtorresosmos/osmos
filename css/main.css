@@ -711,12 +711,51 @@ div {
   padding-top: 1.875rem;
 }
 .carousel-custom.carousel-home-projects .owl-nav button {
-  font-size: 2.25rem;
-  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.3) 62%, rgba(0, 0, 0, 0.2) 100%);
+  border-radius: 40px;
+  height: 40px;
+  color: transparent;
+  font-size: 3.125rem;
+  position: absolute;
+  top: 40%;
+  transition: all 0.4s ease-in-out;
+  width: 40px;
+}
+.carousel-custom.carousel-home-projects .owl-nav button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  color: white;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.75rem;
+  font-weight: 900;
+  height: 100%;
+  left: 1px;
+  top: 5px;
+  width: 100%;
   transition: all 0.4s ease-in-out;
 }
 .carousel-custom.carousel-home-projects .owl-nav button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+.carousel-custom.carousel-home-projects .owl-nav button:hover::after {
+  transform: scale(1.1);
+}
+.carousel-custom.carousel-home-projects .owl-nav button.owl-prev {
+  left: 30px;
+}
+.carousel-custom.carousel-home-projects .owl-nav button.owl-prev::after {
+  content: "\f104";
+}
+.carousel-custom.carousel-home-projects .owl-nav button.owl-next {
+  right: 30px;
+}
+.carousel-custom.carousel-home-projects .owl-nav button.owl-next::after {
+  content: "\f105";
 }
 @media (max-width: 61.9375rem) {
   .carousel-custom.carousel-home-projects .thumb-wrapper {
@@ -1308,9 +1347,12 @@ div {
   width: 100%;
 }
 .table.figure .wrapper {
-  margin-bottom: 6.25rem;
+  margin-bottom: 4rem;
   overflow: hidden;
   padding-left: 11.75rem;
+}
+.table.figure .wrapper:last-child {
+  margin-bottom: 0;
 }
 .table.figure .wrapper.onScreen .title::before {
   bottom: -94px;
@@ -1637,13 +1679,13 @@ div {
 }
 
 .home .home-section {
-  padding-bottom: 3.875rem;
+  padding-bottom: 4rem;
 }
 .home .video-section video {
   width: 100%;
 }
 .home .video-section .buttons-grid {
-  padding-bottom: 4rem;
+  padding-top: 3.125rem;
 }
 .home .video-section .content-wrapper {
   display: flex;
@@ -1687,10 +1729,10 @@ div {
   transition: all 0.4s ease-in-out;
 }
 .home .block-horizonal-home {
-  padding: 4rem 0;
+  padding-bottom: 4rem;
 }
 .home .projects-home {
-  padding: 4rem 0;
+  padding-bottom: 4rem;
 }
 .home .projects-home .bg-title {
   background-position: left;
@@ -1699,6 +1741,7 @@ div {
   background-image: url(../img/img-title.png);
   color: transparent;
   height: 164px;
+  margin: 0;
   width: 624px;
 }
 .home .projects-home .bg-title span {
@@ -1717,7 +1760,7 @@ div {
   border-top: 1px solid black;
 }
 .home .our-services-home .table {
-  padding: 4rem 0;
+  padding-bottom: 4rem;
 }
 @media (max-width: 74.9375rem) {
   .home .video-section .btn-rounded {
@@ -1725,20 +1768,26 @@ div {
   }
 }
 @media (max-width: 61.9375rem) {
+  .home .home-section {
+    padding-bottom: 2rem;
+  }
+  .home .video-section.home-section {
+    padding-bottom: 0;
+  }
   .home .video-section .buttons-grid {
     display: none;
   }
   .home .block-horizonal-home {
-    padding: 1.875rem 0;
+    padding: 0 0 1.875rem;
   }
   .home .projects-home {
-    padding: 2rem 0;
+    padding-bottom: 2rem;
   }
   .home .projects-home .btn-wrapper {
     margin-top: 1.875rem;
   }
   .home .our-services-home .table {
-    padding: 1.875rem 0;
+    padding-bottom: 1.875rem;
   }
 }
 @media (max-width: 47.9375rem) {

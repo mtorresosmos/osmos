@@ -8,6 +8,9 @@ window.addEventListener('scroll', function(){
     scrollpos = window.scrollY;
  
     scrollpos > 70 ? addMenuClassOnScroll() : removeMenuClassOnScroll();
+
+
+    handleIntersection();
 });
 
 // Get Header element
@@ -99,6 +102,35 @@ function tabsCategories() {
         });
     }
 }
+
+
+// Función que se llama cuando un elemento entra o sale del viewport
+function handleIntersection(entries, observer) {
+    if ( entries ) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('onScreen');
+            } else {
+                //console.log(`${entry.target.id} ya no es visible en la pantalla`);
+            }
+        });
+    }
+}
+
+// Crear un IntersectionObserver y pasarle la función de callback
+const observer = new IntersectionObserver(handleIntersection, {
+    root: null, // El viewport
+    rootMargin: '0px',
+    threshold: 0.1 // Porcentaje de visibilidad que debe tener el elemento para que se considere visible
+});
+
+// Seleccionar los elementos que quieres observar
+const elementsToObserve = document.querySelectorAll('[id]');
+elementsToObserve.forEach(element => {
+    observer.observe(element);
+});
+
+
 
 $(document).ready(function() {
     $('.carousel-custom.carousel-home-projects').owlCarousel({

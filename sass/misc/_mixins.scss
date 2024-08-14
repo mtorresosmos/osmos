@@ -43,7 +43,7 @@
 */
 
 /* Define width and height */
-@mixin box($width, $height: $width) {
+@mixin box($width, $height) {
   width: $width;
   height: $height;
 }

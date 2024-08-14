@@ -29,6 +29,8 @@
         
             path {
                 fill: transparent;
+                animation:colors 5s infinite;
+                -webkit-animation: colors 5s infinite;
                 stroke: $clr-black;
                 stroke-width: 1px;
             }

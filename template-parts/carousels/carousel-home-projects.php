@@ -10,44 +10,33 @@ $projects_query = new WP_Query($args);
 ?>
 
 <div class="carousel-custom carousel-home-projects home owl-carousel owl-theme">
-    <?php if ($projects_query->have_posts()) : ?>
-        <?php while ($projects_query->have_posts()) : ?>
-            <?php 
-                $projects_query->the_post(); 
-                
-                // Variables
-                $post_id = get_the_id();
-                $permalink = get_permalink( $post_id );
-                $thumbnail_url = get_the_post_thumbnail_url( $post_id );
-                $title = get_the_title();
-                $overview = get_field('seccion_overview');
-                
-                $post_categories = wp_get_post_categories( $post_id, array( 'fields' => 'names' ) );
-            ?>
-    
-            <div class="item">
-                <a class="thumb-wrapper" href="<?=$permalink; ?>">
-                    <div class="thumb" style="background-image: url(<?=$thumbnail_url; ?>);"></div>
-                </a>
-                <a href="<?=$permalink; ?>" class="title">
-                    <?=$title; ?>
-                </a>
-                <?php if( $post_categories ){ ?>
-                    <div class="category-wrapper">
-                        <?php foreach($post_categories as $name){ ?>
-                            <p><?=$name; ?></p>
-                        <?php } ?>
-                    </div>
-                <?php } ?>
-                
-            </div>
-        <?php endwhile; ?>
-        
-        <?php wp_reset_postdata(); ?>
-        
-    <?php else :
-        
-        echo '<p>No se encontraron proyectos.</p>';
-    endif;
+    <?php
+        if( have_rows('proyecto') ):
+
+            while( have_rows('proyecto') ) : the_row();
+
+                $img = get_sub_field('imagen');
+                $title = get_sub_field('titulo');
+                $cats = get_sub_field('categorias');
+                $url = get_sub_field('link');
+    ?>
+                <div class="item">
+                    <a class="thumb-wrapper" href="<?=$url; ?>">
+                        <div class="thumb" style="background-image: url(<?=$img; ?>);"></div>
+                    </a>
+                    <a href="<?=$url; ?>" class="title">
+                        <?=$title; ?>
+                    </a>
+                    <p><?=$cats; ?></p>
+                    
+                </div>
+    <?php
+            // End loop.
+            endwhile;
+
+        // No value.
+        else :
+            // Do something...
+        endif;
     ?>
 </div>

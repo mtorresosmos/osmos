@@ -361,7 +361,7 @@ get_header();
                                         <?php
                                         
                                         else :
-                                            echo 'No hay colaboradores';
+                                            
                                         endif;
                                         ?>
                                       
@@ -397,7 +397,7 @@ get_header();
                                         <?php
                                         
                                         else :
-                                            echo 'No hay colaboradores';
+                                            
                                         endif;
                                         ?>
                                       

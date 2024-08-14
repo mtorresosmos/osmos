@@ -6,3 +6,22 @@
     top: 5px;
   }
 }
+
+@keyframes colors {
+  0%, 100% {
+      fill: $clr-purple;
+      //fill: rgba($clr-purple, 0.4);
+  }
+  25% {
+      fill: $clr-orange;
+      //fill: rgba($clr-orange, 0.4);
+  }
+  50% {
+      fill: $clr-blue;
+      //fill: rgba($clr-blue, 0.4);
+  }
+  75% {
+      fill: $clr-green;
+      //fill: rgba($clr-green, 0.4);
+  }
+}

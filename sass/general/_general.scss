@@ -61,6 +61,8 @@ div { box-sizing: border-box; }
 
 .bg-gray-2 { background-color: $clr-gray-2; }
 
+.bg-gray-5 { background-color: $clr-gray-5; }
+
 /****** Headings ******/
 .heading {    
     margin: 0;
@@ -130,7 +132,7 @@ div { box-sizing: border-box; }
             size: 500px;
         }
         border: 1px solid $clr-white;
-        border-radius: 6px;
+        border-radius: 22px;
         color: $clr-white;
         cursor: pointer;
         overflow: hidden;
@@ -152,6 +154,8 @@ div { box-sizing: border-box; }
 
             &::after { display: none; }
         }
+
+        i { margin-left: 0.4375rem; }
     }
 
     &.btn-footer {
@@ -177,7 +181,6 @@ div { box-sizing: border-box; }
         }
     }
 }
-
 
 /* ===== Responsive ===== */
 @media (max-width: $device-tablet) {

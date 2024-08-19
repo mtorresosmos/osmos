@@ -37,9 +37,9 @@
     .fig-logo {
         @include background($position: center left ,$repeat: no-repeat, $size: contain);
         background-image: url(../img/logo-circle.png);
-        height: 180px;
-        margin-bottom: 4.5rem;
-        width: 192px;
+        height: 140px;
+        margin-bottom: 3.125rem;
+        width: 160px;
     }
 
     .content { padding: 4rem 0 8rem; }
@@ -52,7 +52,7 @@
 
     .btn-wrapper { 
         @include flex-config($align-items: flex-start, $flex-direction: column, $justify-content: flex-start);
-        margin-top: 11.25rem; 
+        margin-top: 3.125rem; 
     }
 
     .btn-link-contact {

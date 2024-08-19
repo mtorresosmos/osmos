@@ -20,7 +20,7 @@ get_header();
             <?php get_template_part( 'template-parts/banners/banner-single-projects-main' );  ?>
             
             <!-- Project overview -->
-            <div class="overview bg-black">
+            <div class="overview bg-black-1">
                 <div class="content-wrapper">
                     <div class="top">
                         <h1 class="heading heading-1 title"><?php the_title(); ?></h1>
@@ -93,9 +93,8 @@ get_header();
                                          * Field Structure:
                                          *
                                          * - servicios_proporcionados (Repeater)
-                                         *   - servicio (Repeater)
-                                         *     - descripcion (Text)
-                                         *     - categoria (Select)
+                                         *   - servicio (Text)
+                                         *   - categoria (Select)
                                         */
                                         if ( have_rows('servicios_proporcionados') ):
 
@@ -104,52 +103,43 @@ get_header();
                                             ?>
                                                 <div class="group"> 
                                                     
-                                                    <?php if ( have_rows ('servicio') ): ?>
+                                                    <?php 
+                                                        $service = get_sub_field('servicio'); 
+                                                    ?>
+                                                    
+                                                    <div class="col-desc">
+                                                        <p class="desc"><?=esc_html($service); ?></p>
+                                                    </div>
 
-                                                        <div class="col-desc">
+                                                    <?php 
+                                                        $cat = get_sub_field('categoria'); 
 
-                                                            <?php while( have_rows('servicio') ) : ?>
-                                                                <?php
-                                                                    the_row(); 
-                                                                    $name = get_sub_field('descripcion'); 
-                                                                ?>
-                                                        
-                                                                <p class="desc"><?=esc_html($name); ?></p>
-                                                            <?php endwhile;  ?>
-
-                                                        </div>
-
-                                                        <?php 
-                                                            $cat = get_sub_field('categoria'); 
-
-                                                            switch ( $cat ) {
-                                                                case 'Brand Strategy':
-                                                                    $bg_color = 'bg-orange';
-                                                                    break;
-                                                                case 'Digital Marketing':
-                                                                    $bg_color = 'bg-purple';
-                                                                    break;
-                                                                case 'Graphic Design':
-                                                                    $bg_color = 'bg-orange';
-                                                                    break;
-                                                                case 'Web Development':
-                                                                    $bg_color = 'bg-blue';
-                                                                    break;
-                                                                case 'Audiovisual':
-                                                                    $bg_color = 'bg-green';
-                                                                    break;
-                                                                case 'Photography':
-                                                                    $bg_color = 'bg-green';
-                                                                    break;
-                                                                default:
-                                                                    $bg_color = '';
-                                                                    break;
-                                                            }
-                                                        ?>
-                                                        
-                                                        <div class="circle <?=$bg_color; ?>"></div>
-
-                                                    <?php endif; // repeater ?>
+                                                        switch ( $cat ) {
+                                                            case 'Brand Strategy':
+                                                                $bg_color = 'bg-orange';
+                                                                break;
+                                                            case 'Digital Marketing':
+                                                                $bg_color = 'bg-purple';
+                                                                break;
+                                                            case 'Graphic Design':
+                                                                $bg_color = 'bg-orange';
+                                                                break;
+                                                            case 'Web Development':
+                                                                $bg_color = 'bg-blue';
+                                                                break;
+                                                            case 'Audiovisual':
+                                                                $bg_color = 'bg-green';
+                                                                break;
+                                                            case 'Photography':
+                                                                $bg_color = 'bg-green';
+                                                                break;
+                                                            default:
+                                                                $bg_color = '';
+                                                                break;
+                                                        }
+                                                    ?>
+                                                    
+                                                    <div class="circle <?=$bg_color; ?>"></div>
 
                                                 </div>
 
@@ -319,11 +309,11 @@ get_header();
 
             <!-- Team -->
             <div class="team">
-                <div class="content-wrapper">
+                <div class="content-wrapper big">
                     <div class="row">
-                        <div class="column column-2">
+                        <div class="column column-1">
                             <div class="logo-cirlce"></div>
-                            <h2 class="heading heading-1 title">Humans behind the project</h2>
+                            <h2 class="heading heading-1 title">Humans behind <br> the project</h2>
                         </div>
 
                         <div class="column column-2">

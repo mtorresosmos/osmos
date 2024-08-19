@@ -4,6 +4,7 @@ $args = array(
     'post_type'      => 'proyectos',
     'posts_per_page' => -1,
     'post_status'    => 'publish',
+    'order'          => 'ASC',
     'tax_query' => array(
         array(
             'taxonomy' => 'category',

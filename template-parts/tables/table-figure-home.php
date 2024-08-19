@@ -31,7 +31,7 @@
             <p class="txt">Generación de Leads</p>
             <p class="txt">Investigación de Mercados</p>
             <p class="txt">Estrategia de Marca</p>
-            <p class="txt">Poscicionamiento de Marca</p>
+            <p class="txt">Posicionamiento de Marca</p>
             <p class="txt">Asesoría en Proceso Comercial</p>
         </div>
     </div>

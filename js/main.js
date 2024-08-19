@@ -47,10 +47,10 @@ function mobileMenuHandler() {
 
 // Remove tag attributes in Projects sections
 function removeProjectSectionsAttributes() {
-    const videoElement = document.querySelector( '.wp-video' );
+    const videoElement = document.querySelectorAll( '.wp-video' );
 
     if ( videoElement ) {
-        videoElement.removeAttribute('style');
+        videoElement.forEach(video => video.removeAttribute('style'));   
     }
 }
 
@@ -103,7 +103,6 @@ function tabsCategories() {
     }
 }
 
-
 // Función que se llama cuando un elemento entra o sale del viewport
 function handleIntersection(entries, observer) {
     if ( entries ) {
@@ -129,7 +128,6 @@ const elementsToObserve = document.querySelectorAll('[id]');
 elementsToObserve.forEach(element => {
     observer.observe(element);
 });
-
 
 
 $(document).ready(function() {

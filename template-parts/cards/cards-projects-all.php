@@ -3,7 +3,8 @@
 $args = array(
     'post_type'      => 'proyectos',
     'posts_per_page' => -1,
-    'post_status'    => 'publish'
+    'post_status'    => 'publish',
+    'order'          => 'ASC'
 );
 
 $projects_query = new WP_Query($args);

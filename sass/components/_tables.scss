@@ -30,7 +30,7 @@
             .columns { 
                 align-items: unset;
                 display: grid;
-                gap: 16px;
+                gap: 0 16px;
                 grid-template-columns: repeat(4, 1fr);
             }
 

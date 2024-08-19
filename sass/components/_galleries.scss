@@ -23,7 +23,7 @@
 
     &.columns-2,
     &.columns-3 {
-        @include flex-config($align-items: flex-start, $flex-direction: row, $flex-wrap: wrap, $justify-content: center);
+        @include flex-config($align-items: flex-start, $flex-direction: row, $flex-wrap: wrap, $justify-content: flex-start);
 
         img,
         .wp-video {

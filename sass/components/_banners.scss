@@ -1,8 +1,97 @@
 .banner {
-    @include background($position: center ,$repeat: no-repeat, $size: cover);
     width: 100%;
     
-    &.simple { height: 640px; }
+    &.simple { 
+        @include background($position: center ,$repeat: no-repeat, $size: cover);
+        height: 640px; 
+    }
+
+    &.hero-text-columns {
+        color: $clr-white;
+        padding: 5rem 0;
+
+        .column {
+            width: 100%;
+
+            &.column-1 {
+                .container-1 { 
+                    flex: 70%; 
+                    max-width: 924px;
+                }
+
+                .container-2 { 
+                    flex: 30%; 
+                    margin-left: 4rem;
+                    max-width: 136px;
+                }
+            }
+
+            &.column-2 {
+                .container { 
+                    flex: 50%; 
+                    max-width: 624px;
+
+                    &.container-1 { margin-right: 4rem; }
+                }
+            }
+        }
+
+        .container {
+            @include flex-config($align-items: flex-start, $flex-direction: column, $justify-content: center);            
+        }
+
+        .subtitle,
+        .title { font-weight: 400; }
+
+        .title {
+            font-size: $font-64;
+        }
+
+        .subtitle { 
+            font-size: $font-28;
+            margin-bottom: 2rem;
+            text-transform: uppercase; 
+        }
+
+        .spinner {
+            @include background($position: center ,$repeat: no-repeat, $size: cover);
+            background: {
+                color: $clr-purple;
+                image: url(../img/bg-spinner.png);
+            }
+            border-radius: 136px;
+            height: 136px;
+            width: 136px;
+
+            &:hover { animation: spinner 15s linear infinite; }
+        }
+
+        .separator {  
+            border-color: $clr-white;
+            margin: 4rem 0;
+        }
+
+        .figure {
+            @include background($position: center ,$repeat: no-repeat, $size: contain);
+            background-image: url(../img/bg-m.svg);
+            height: 316px;
+            max-width: 624px;
+            position: relative;
+            width: 100%;
+        }
+
+        .main-text { font-size: $font-38; }
+
+        .secondary-text {  
+            font-size: $font-24;
+            margin: 2rem 0 3.75rem;
+        }
+
+        .text { 
+            color: $clr-gray-1;
+            font-size: $font-18;
+        }
+    }
 
     @media (max-width: $device-desktop) {
         &.simple { height: 370px; }
@@ -10,6 +99,89 @@
 
     @media (max-width: $device-tablet) {
         &.simple { height: 285px; }
+
+        &.hero-text-columns {
+            padding: 3.75rem 0;
+
+            .column {
+                &.column-2 {
+                    .container {
+                        &.container-1 { margin-right: 1.875rem; }
+                    }
+                }
+            }
+
+            .title {
+                font-size: $font-36;
+                line-height: 38px;
+            }
+
+            .subtitle { margin-bottom: 0.9375rem; }
+
+            .separator { margin: 1.875rem 0; }
+
+            .main-text { font-size: $font-28; }
+
+            .secondary-text {
+                font-size: $font-22;
+                margin: 1.875rem 0;
+            }
+        }
+    }
+
+    @media (max-width: $device-sm) {
+        &.hero-text-columns {
+            padding: 1.875rem 0;
+
+            .column {
+                &.column-1 {
+                    margin-bottom: 1.875rem;
+
+                    .container {
+                        &.container-1 { flex: 100%; }
+
+                        &.container-2 { display: none; }
+                    }
+                }
+
+                &.column-2 {
+                    flex-direction: column;
+
+                    .container {
+                        flex: 100%;
+                        width: 100%;
+
+                        &.container-1 { 
+                            align-items: center;
+                            margin-right: 0; 
+                        }
+                    }
+                }
+            }
+
+            .subtitle { font-size: $font-regular; }
+
+            .separator { display: none; }
+
+            .figure {
+                align-items: center;
+                display: flex;
+                height: 143px;
+                margin: 0 auto 1.875rem;
+                width: 280px;
+
+                &::before {
+                    @include background($position: center ,$repeat: no-repeat, $size: cover);
+                    @include box($width: 85px, $height: 85px);
+                    @include pseudo($display: block, $pos: absolute, $content: '');
+                    background: {
+                        color: $clr-purple;
+                        image: url(../img/bg-spinner.png);
+                    }
+                    border-radius: 85px;
+                }
+            }
+        }
     }
 
     @media (max-width: $device-xs) {

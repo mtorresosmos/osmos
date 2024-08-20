@@ -23,7 +23,7 @@
 			</div>
 		</div>
 
-		<div class="block-horizonal-home home-section">
+		<div class="block-horizontal-home home-section">
 			<?php get_template_part( 'template-parts/blocks/block-columns-horizontal' ); ?>
 		</div>
 

@@ -50,29 +50,173 @@
 				<div class="row">
 					<div class="column col-1">
 						<div class="container-text">
-							<h3 class="heading">Brand Strategy</h3>
+							<h3 class="heading title">Brand Strategy</h3>
 							<p>
 								Fusionamos creatividad y estrategia para dar vida a tu marca. Nos especializamos en brindar servicios integrales, desde el diseño de logotipos hasta las pautas de marca. Nos sumergimos en cada detalle para asegurarnos de que tu marca refleje tus valores, resuene con tu audiencia y se destaque en la competencia, encontrando el equilibrio perfecto entre tus necesidades y nuestro potencial creativo.
 							</p>
-							<a href="#" class="btn btn-primary btn-slide btn-category">
-								Descubre más
-								<i class="fas fa-arrow-right"></i>
-							</a>
-							<a href="#" class="btn btn-primary btn-slide btn-category">
-								Descubre más
-								<i class="fas fa-arrow-right"></i>
-							</a>
+							<div class="btn-wrapper">
+								<a href="<?php echo home_url(); ?>/contacto/" class="btn btn-primary btn-slide btn-arrow">
+									Contact Us
+									<i class="fas fa-arrow-right"></i>
+								</a>
+								<a href="<?php echo home_url(); ?>/categorias/" class="btn btn-primary btn-slide btn-white">
+									All Projects
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
 						</div>
 					</div>
 
 					<div class="column col-2">
+						<figure class="container-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/services/img-strategy.jpg" alt="Brand Strategy">
+						</figure>
+					</div>
+				</div>
 
+				<div class="row inverse">
+					<div class="column col-1">
+						<div class="container-text">
+							<h3 class="heading title">Digital Marketing</h3>
+							<p>
+								Creamos estrategias tan únicas como tu marca, potenciando tus fortalezas y generando ese enamoramiento instantáneo con tu audiencia. Nos enfocamos en impulsar el crecimiento de tu negocio en internet, diseñando contenido digital basado en insights para conectar a las audiencias con tu marca, producto o servicio. Con un equipo de expertos en estrategia, Osmos lleva tu presencia online a un nivel totalmente nuevo.
+							</p>
+							<div class="btn-wrapper">
+								<a href="<?php echo home_url(); ?>/contacto/" class="btn btn-primary btn-slide btn-arrow">
+									Contact Us
+									<i class="fas fa-arrow-right"></i>
+								</a>
+								<a href="<?php echo home_url(); ?>/categorias/" class="btn btn-primary btn-slide btn-white">
+									All Projects
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="column col-2">
+						<figure class="container-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/services/img-marketing.jpg" alt="Digital Marketing">
+						</figure>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column col-1">
+						<div class="container-text">
+							<h3 class="heading title">Graphic Design</h3>
+							<p>
+								Fusionamos creatividad y estrategia para dar vida a tu marca. Nos especializamos en brindar servicios integrales, desde el diseño de logotipos hasta las pautas de marca. Nos sumergimos en cada detalle para asegurarnos de que tu marca refleje tus valores, resuene con tu audiencia y se destaque en la competencia, encontrando el equilibrio perfecto entre tus necesidades y nuestro potencial creativo.
+							</p>
+							<div class="btn-wrapper">
+								<a href="<?php echo home_url(); ?>/contacto/" class="btn btn-primary btn-slide btn-arrow">
+									Contact Us
+									<i class="fas fa-arrow-right"></i>
+								</a>
+								<a href="<?php echo home_url(); ?>/categorias/" class="btn btn-primary btn-slide btn-white">
+									All Projects
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="column col-2">
+						<figure class="container-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/services/img-design.jpg" alt="Graphic Design">
+						</figure>
+					</div>
+				</div>
+
+				<div class="row inverse">
+					<div class="column col-1">
+						<div class="container-text">
+							<h3 class="heading title">Web Development</h3>
+							<p>
+								Dotamos de presencia digital a tu marca. Nuestro equipo de desarrollo web fusiona creatividad y eficiencia técnica para concebir sitios que no solo cautivan visualmente, sino que también ofrecen funcionalidades poderosas. Desde interfaces intuitivas hasta soluciones personalizadas, nos sumergimos en el código para elevar tu marca a nuevas alturas en el mundo digital.
+							</p>
+							<div class="btn-wrapper">
+								<a href="<?php echo home_url(); ?>/contacto/" class="btn btn-primary btn-slide btn-arrow">
+									Contact Us
+									<i class="fas fa-arrow-right"></i>
+								</a>
+								<a href="<?php echo home_url(); ?>/categorias/" class="btn btn-primary btn-slide btn-white">
+									All Projects
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="column col-2">
+						<figure class="container-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/services/img-web.jpg" alt="Web Development">
+						</figure>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column col-1">
+						<div class="container-text">
+							<h3 class="heading title">Audiovisual</h3>
+							<p>
+								Explora la magia del movimiento con Osmos™. En nuestro servicio Audiovisual, transformamos ideas estáticas en experiencias dinámicas. Con un enfoque único y creatividad inigualable, damos vida a tus conceptos a través de animaciones cautivadoras. Desde logos animados hasta presentaciones impactantes, nuestro equipo experto en Video eleva la narrativa visual de tu marca, capturando su esencia en cada fotograma.
+							</p>
+							<div class="btn-wrapper">
+								<a href="<?php echo home_url(); ?>/contacto/" class="btn btn-primary btn-slide btn-arrow">
+									Contact Us
+									<i class="fas fa-arrow-right"></i>
+								</a>
+								<a href="<?php echo home_url(); ?>/categorias/" class="btn btn-primary btn-slide btn-white">
+									All Projects
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="column col-2">
+						<figure class="container-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/services/img-audiovisual.jpg" alt="Audiovisual">
+						</figure>
+					</div>
+				</div>
+
+				<div class="row inverse">
+					<div class="column col-1">
+						<div class="container-text">
+							<h3 class="heading title">Photography</h3>
+							<p>
+								Nuestro servicio de fotografía ofrece una experiencia visual cuidadosamente construida. Con un enfoque creativo y técnico especial, nuestro equipo de fotógrafos expertos captura momentos únicos. Desde tomas cautivadoras de productos hasta la representación visual de sitios, cada imagen cuenta una historia propia. Con Osmos, transformamos instantes en poderosas imágenes que destacan autenticidad.
+							</p>
+							<div class="btn-wrapper">
+								<a href="<?php echo home_url(); ?>/contacto/" class="btn btn-primary btn-slide btn-arrow">
+									Contact Us
+									<i class="fas fa-arrow-right"></i>
+								</a>
+								<a href="<?php echo home_url(); ?>/categorias/" class="btn btn-primary btn-slide btn-white">
+									All Projects
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="column col-2">
+						<figure class="container-img">
+							<img src="<?php echo get_template_directory_uri();?>/img/services/img-photography.jpg" alt="Photography">
+						</figure>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- /Services -->
+
+		<!-- Banner buttons -->
+		 <div class="block-wrapper">
+			 <?php get_template_part( 'template-parts/blocks/block-columns-vertical-buttons' ); ?>
+		 </div>
+		<!-- /Banner buttons -->
 		
 	</main>
 

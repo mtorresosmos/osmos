@@ -92,6 +92,68 @@
         }
     }
 
+    &.carousel-blog-related {
+        .item {
+            max-width: 453px;
+            padding: 1.5rem;
+            width: 100%;
+
+            a { display: block; }
+        }
+
+        .image {
+            margin-bottom: 2rem;
+
+            .attachment-post-thumbnail { 
+                max-height: 250px;
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        .reading {
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .blog-name {  
+            color: $clr-black;
+            margin-bottom: 2rem;
+        }
+
+        .description {  
+            color: $clr-black;
+            margin-bottom: 4rem;
+        }
+
+        .author-wrapper {
+            @include flex-config($align-items: center, $flex-direction: row, $justify-content: flex-start);
+
+            .photo {
+                border-radius: 64px;
+                max: {
+                    height: 4rem;
+                    width: 4rem;
+                }
+            }
+
+            .content { margin-left: 1rem; }
+
+            .name {
+                font-size: $font-20;
+                margin-bottom: 1rem;
+            }
+
+            .position { font-size: $font-18; }
+        }
+
+        .category-name {
+            font-size: $font-14;
+            margin-top: 0.3125rem;
+            text-align: right;
+        }
+    }
+
     @media (max-width: $device-tablet) {
         &.carousel-home-projects {
             .thumb-wrapper { height: 270px; }

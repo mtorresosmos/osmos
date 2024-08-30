@@ -110,17 +110,11 @@
                 }
             }
 
-            &:focus-visible { outline: 0; }
-
             &.wpcf7-not-valid {
                 border-color: $clr-red;
                 margin-bottom: 0.9375rem;
             }
         }
-        
-        .wpcf7-response-output { border-color: transparent; }
-
-        .wpcf7-not-valid-tip { margin-bottom: 1.875rem; }
 
         .label-form { 
             font-size: $font-20; 
@@ -138,14 +132,60 @@
             }
         }
 
-        &.submitting {
-            .btn { 
-                &.btn-primary { display: none; }
-            }
-    
+        &.submitting {    
             .wpcf7-spinner { margin: 2.5rem 0 0; }
         }
     }
+
+    &.form-newsletter {
+        @include flex-config($align-items: center, $flex-direction: column, $justify-content: center);
+
+        .input {
+            border: 1px solid $clr-black;
+            margin-bottom: 1rem;
+            padding: 0.875rem;
+            width: 100%;
+
+            &::-webkit-input-placeholder { color: $clr-gray-7; }
+
+            &::-moz-placeholder { color: $clr-gray-7; }
+                
+            &:-ms-input-placeholder { color: $clr-gray-7; }
+
+            &:-moz-placeholder { color: $clr-gray-7; }
+        }
+
+        .btn-newsletter {
+            border: 1px solid $clr-black
+        }
+
+        &.submitting {
+            .wpcf7-spinner { margin: 0; }
+        }
+
+        .wpcf7-not-valid-tip { text-align: center; }
+
+        .wpcf7-response-output { 
+            margin-top: 0; 
+            text-align: center;
+        }
+    }
+
+    .input {
+        &.input-text {
+            &:focus-visible { outline: 0; }
+        }
+    }
+
+    &.submitting {
+        .btn { 
+            &.btn-primary { display: none; }
+        }
+    }
+
+    .wpcf7-response-output { border-color: transparent; }
+
+    .wpcf7-not-valid-tip { margin-bottom: 1.875rem; }
 }
 
 .wpcf7 {

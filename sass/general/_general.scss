@@ -69,6 +69,14 @@ div { box-sizing: border-box; }
 
 .bg-gray-5 { background-color: $clr-gray-5; }
 
+.bg-orange-transparent { background-color: rgba($clr-orange, 0.1); }
+
+.bg-purple-transparent { background-color: rgba($clr-purple , 0.1); }
+
+.bg-blue-transparent { background-color: rgba($clr-blue, 0.1); }
+
+.bg-green-transparent { background-color: rgba($clr-green, 0.1); }
+
 /****** Headings ******/
 .heading {    
     margin: 0;

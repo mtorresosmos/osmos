@@ -3,6 +3,165 @@
         .content-wrapper { max-width: 1536px; }
     }
 
+    &.blog {
+        .heading-wrapper {
+            .title { 
+                text-transform: none;
+                padding: 2rem 0 4rem; 
+            }
+        }
+
+        .top-content {
+            @include flex-config($align-items: center, $flex-direction: row, $justify-content: center);
+            padding: 2rem 0;
+            
+            .blog-category,
+            .reading-time {
+                font-size: $font-24;
+                line-height: 26px;
+            }
+    
+            .blog-category {
+                margin-right: 0.625rem;
+                padding: 0.75rem 32px;
+            }
+        }
+
+        .content-container { 
+            padding-bottom: 4rem; 
+
+            .row { flex-direction: row; }
+
+            .column { 
+                flex-direction: column; 
+                
+                &.col-2 { padding-left: 1.25rem; }
+            }
+            
+            .attachment-post-thumbnail {
+                height: auto;
+                padding: 0 0 4rem;
+                width: 100%;
+            }
+
+            .column {
+                justify-content: space-between;
+                width: 100%;
+    
+                &.col-1 {
+                    flex: 35%;
+                    flex-direction: column;
+                    max-width: 320px;
+                }
+    
+                &.col-2 {
+                    flex: 65%;
+                    max-width: 862px;
+                }
+            }
+
+            .info {
+                @include flex-config($align-items: center, $flex-direction: row, $justify-content: flex-start);
+                margin-top: 2.5rem;
+                width: 100%;
+            }
+    
+            .photo {
+                border-radius: 64px;
+                margin-right: 1rem;
+                max: {
+                    height: 64px;
+                    width: 64px;
+                }
+                width: 100%;
+            }
+    
+            .name {
+                font-size: $font-20;
+                line-height: 22px;
+                margin-bottom: 1rem;
+            }
+    
+            .position {
+                font-size: $font-18;
+                line-height: 20px;
+            }
+    
+            .newsletter-container {
+                border: {
+                    bottom: 1px solid $clr-black;
+                    top: 1px solid $clr-black;
+                }
+                margin-top: 3rem;
+                padding: 3rem 0;
+                width: 100%;
+            }
+    
+            .newsletter-title {
+                font-size: $font-20;
+                margin-bottom: 1rem;
+            }
+    
+            .newsletter-text {
+                font-size: $font-12;
+                line-height: 14px;
+                margin-top: 1rem;
+            }
+    
+            .social-container {
+                padding-top: 3rem;
+    
+                .social-title {
+                    font-size: $font-20;
+                    margin-bottom: 1rem;
+                }
+    
+                .list {
+                    @include flex-config($align-items: center, $flex-direction: row, $justify-content: flex-start);
+                }
+    
+                li { 
+                    margin-right: 0.5rem; 
+                    
+                    &:last-child { margin-right: 0; }
+                }
+    
+                .icon {
+                    @include background($position: center ,$repeat: no-repeat, $size: cover);
+                    @include box($width: 32px, $height: 32px);
+                    background-color: $clr-gray-5;
+                    border-radius: 32px;
+                    display: block;
+    
+                    &.link { background-image: url(../img/icons/icon-link.svg); }
+    
+                    &.linkedin { background-image: url(../img/icons/icon-linkedin.svg); }
+    
+                    &.x { background-image: url(../img/icons/icon-x.svg); }
+    
+                    &.fb { background-image: url(../img/icons/icon-fb.svg); }
+                }
+            }
+    
+            .article-wrapper {
+                img {  
+                    margin: 4rem 0;
+                    width: 100%;
+                }
+            }
+        }
+
+        .related-blogs-wrapper {
+            padding: 2rem 0.9375rem 4rem;
+
+            .related-title {
+                border-bottom: 1px solid $clr-black;
+                font-size: $font-20;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
     .overview {
         color: $clr-white;
 
@@ -255,6 +414,39 @@
     }
 
     @media (max-width: $device-tablet) {
+        &.blog {
+            .heading-wrapper {
+                .top-content { padding: 2rem 0 0; }
+        
+                .heading {
+                    &.title { 
+                        font-size: $font-48; 
+                        line-height: 50px;
+                        padding: 2rem 0 2rem;
+                    }
+                }
+            }
+
+            .content-container {
+                padding-bottom: 2rem;
+    
+                .attachment-post-thumbnail { padding: 0 0 2rem; }
+                
+                .name { font-size: $font-18; }
+    
+                .position { font-size: $font-regular; }
+            }
+
+            .social-container { padding-top: 2rem; }
+
+            .article-wrapper {
+                img {  
+                    margin: 2rem 0;
+                    width: 100%;
+                }
+            }
+        }
+
         .overview {
             .wrapper {
                 .column {
@@ -307,6 +499,57 @@
     }
 
     @media (max-width: $device-sm) {
+        &.blog {
+            .heading-wrapper {
+                .heading {
+                    &.title { 
+                        font-size: $font-36; 
+                        line-height: 38px;
+                        padding: 2rem 0 2rem;
+                    }
+                }
+            }
+
+            .top-content { 
+                flex-direction: column; 
+                
+                .blog-category,
+                .reading-time {
+                    font-size: $font-20;
+                    line-height: 22px;
+                }
+
+                .blog-category {
+                    margin: {
+                        bottom: 1.25rem;
+                        right: 0;
+                    }
+                }
+            }
+
+            .content-container {   
+                .row { flex-direction: column; }
+    
+                .column {
+                    &.col-1 { 
+                        flex: 100%;
+                        margin-top: 1.875rem;
+                        max-width: 100%;
+                        order: 2; 
+                    }
+    
+                    &.col-2 { 
+                        flex: 100%;
+                        max-width: 100%;
+                        order: 1;
+                        padding-left: 0; 
+                    }
+                }
+            }
+
+            .social-container { margin: 0 auto; }
+        }
+
         .overview {
             .top {
                 align-items: flex-start;

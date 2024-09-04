@@ -1,6 +1,6 @@
 <div class="table figure">
     <div id="marketing" class="wrapper wrapper-1">
-        <h3 class="heading title marketing">Digital Marketing</h3>
+        <h3 class="heading title marketing"><a href="https://somososmos.com/servicios/">Digital Marketing</a></h3>
         <div class="columns">
             <p class="txt">Facebook</p>
             <p class="txt">Instagram</p>
@@ -13,7 +13,7 @@
     </div>
 
     <div id="identity" class="wrapper wrapper-2">
-        <h3 class="heading title branding">Brand Identity</h3>
+        <h3 class="heading title branding"><a href="https://somososmos.com/servicios/">Brand Identity</a></h3>
         <div class="columns">
             <p class="txt">Branding</p>
             <p class="txt">Naming</p>
@@ -25,7 +25,7 @@
     </div>
 
     <div id="strategy" class="wrapper wrapper-3">
-        <h3 class="heading title strategy">Digital Strategy</h3>
+        <h3 class="heading title strategy"><a href="https://somososmos.com/servicios/">Digital Strategy</a></h3>
         <div class="columns">
             <p class="txt">Inbound Marketing</p>
             <p class="txt">Generación de Leads</p>
@@ -37,7 +37,7 @@
     </div>
 
     <div id="audiovisual" class="wrapper wrapper-4">
-        <h3 class="heading title audiovisual">Audiovisual</h3>
+        <h3 class="heading title audiovisual"><a href="https://somososmos.com/servicios/">Audiovisual</a></h3>
         <div class="columns">
             <p class="txt">Fotografía Profesional</p>
             <p class="txt">Videos Promocionales</p>
@@ -50,7 +50,7 @@
     </div>
 
     <div id="web" class="wrapper wrapper-5">
-        <h3 class="heading title web">Web Development</h3>
+        <h3 class="heading title web"><a href="https://somososmos.com/servicios/">Web Development</a></h3>
         <div class="columns">
             <p class="txt">E-Commerce</p>
             <p class="txt">Site Mapping</p>

@@ -16,7 +16,7 @@
 			<div class="row content">
 				<div class="column column-1">
 					<div class="fig-logo"></div>
-					<a class="link" href="mailto:jruiz@somososmos.com">jruiz@somososmos.com</a>
+					<a class="link" href="mailto:hello@somososmos.com">hello@somososmos.com</a>
 					<a class="link" href="tel:+526143782051">+52 (614) 378 2051</a>
 
 					<div class="btn-wrapper">

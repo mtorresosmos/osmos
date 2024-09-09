@@ -18,8 +18,8 @@
 						<p>
 							Con nuestra <strong>experiencia</strong> y enfoque <strong>innovador</strong>, <strong>ayudamos a marcas</strong> como la tuya a <strong>alcanzar</strong> sus objetivos en un mercado competitivo.
 						</p>
-						<a href="#" class="btn btn-primary btn-slide btn-category">
-							Descubre más
+						<a href="https://somososmos.com/contacto/" class="btn btn-primary btn-slide btn-category">
+							CONTÁCTANOS
 							<i class="fas fa-arrow-right"></i>
 						</a>
 					</div>

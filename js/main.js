@@ -133,38 +133,42 @@ elementsToObserve.forEach(element => {
 $(document).ready(function() {
     $('.carousel-custom.carousel-home-projects').owlCarousel({
         stagePadding: 160,
-        loop:true,
+        loop: true,
         margin: 20,
-        nav:true,
-        responsive:{
-            0:{
+        nav: true,
+        autoplay: true,         // Habilitar autoplay
+        autoplayTimeout: 3000,  // Tiempo entre los deslizamientos (3 segundos)
+        //rtl: true,              // Deslizar de derecha a izquierda
+        responsive: {
+            0: {
                 margin: 20,
-                items:1,
+                items: 1,
                 stagePadding: 20,
             },
-            600:{
-                items:2
+            600: {
+                items: 2
             },
-            1000:{
-                items:3
+            1000: {
+                items: 3
             }
         }
     });
 
+    // El siguiente bloque permanece igual, ya que no se pidió cambiarlo
     $('.carousel-custom.carousel-blog-related').owlCarousel({
-        loop:false,
+        loop: false,
         margin: 20,
-        nav:false,
-        responsive:{
-            0:{
-                items:1,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1,
             },
-            600:{
-                items:2
+            600: {
+                items: 2
             },
-            1000:{
-                items:3
+            1000: {
+                items: 3
             }
         }
-    })
+    });
 });
